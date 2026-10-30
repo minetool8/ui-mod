@@ -6,7 +6,7 @@ license="MIT"
 modId="unifiedui"
 version="0.1.0"
 displayName="Unified UI"
-description='''Ring hotbar on the left, health and hunger on the right, and hidden potion effect icons. Vanilla only.'''
+description='''Ring hotbar on the left, survival bars on the right (Legendary Survival Overhaul), and hidden potion effect icons.'''
 displayTest="IGNORE_ALL_VERSION"
 
 [[dependencies.unifiedui]]
@@ -21,4 +21,11 @@ modId="minecraft"
 mandatory=true
 versionRange="[1.20.1,1.21)"
 ordering="NONE"
+side="CLIENT"
+
+[[dependencies.unifiedui]]
+modId="legendarysurvivaloverhaul"
+mandatory=true
+versionRange="[1.20.1-2.4.7,)"
+ordering="AFTER"
 side="CLIENT"
