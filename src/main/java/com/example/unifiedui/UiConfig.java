@@ -7,6 +7,13 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public final class UiConfig {
+    /** Bar keys and their default extra Y offset (negative = up). */
+    private static final Object[][] BARS = {
+            {"health", -40}, {"armor", -40}, {"lso_health_overhaul", -40}, {"lso_body_damage", -40},
+            {"food", 0}, {"lso_cold_hunger", 0}, {"lso_thirst", 0}, {"lso_temperature", 0},
+            {"lso_wetness", 0}, {"air", -20}
+    };
+
     public static final ForgeConfigSpec CLIENT_SPEC;
     public static final Client CLIENT;
 
@@ -17,13 +24,6 @@ public final class UiConfig {
     }
 
     private UiConfig() {}
-
-    /** Bar keys and their default extra Y offset (negative = up). */
-    private static final Object[][] BARS = {
-            {"health", -40}, {"armor", -40}, {"lso_health_overhaul", -40}, {"lso_body_damage", -40},
-            {"food", 0}, {"lso_cold_hunger", 0}, {"lso_thirst", 0}, {"lso_temperature", 0},
-            {"lso_wetness", 0}, {"air", -20}
-    };
 
     public static final class Client {
         public final ForgeConfigSpec.BooleanValue hudEnabled;
